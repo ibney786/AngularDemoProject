@@ -1,0 +1,69 @@
+<br />
+<!-- Icons -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <mat-label>Icons:-</mat-label>
+            <div>
+                <mat-icon color="accent">home</mat-icon>
+                <mat-icon >home</mat-icon>
+                <mat-icon color="accent">grade</mat-icon>
+                <mat-icon >grade</mat-icon>
+        
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div><mat-label>mat Progress Spinner</mat-label>
+                <mat-progress-spinner value="60"></mat-progress-spinner>
+                </div>
+                <div>
+                    <mat-label>mat Spinner</mat-label><br>
+<mat-spinner *ngIf="matspinner"></mat-spinner>
+<button mat-button color="accent" (click)="loadSpinner()">Load Spinner</button>
+                </div>
+            </div>
+    </div>
+    
+</div>
+
+<!-- Badges -->
+
+<div class="row">
+    <div class="col-md-2">
+        <mat-label>Badges:-</mat-label>
+        <h3>abve and before </h3>
+        <div><span matBadge="2" matBadgeOverlap="false">Notification</span></div>
+        <div><span matBadge="2" matBadgePosition="below before" matBadgeOverlap="false">Notification</span></div>
+        <div><span matBadge="2" matBadgePosition="below after" matBadgeOverlap="false">Notification</span></div>
+        <div><span matBadge="2" matBadgePosition="above before" matBadgeOverlap="false">Notification</span></div>
+    
+    </div>
+    <div class="col-md-2">
+<h3>size overlap</h3>
+        <div> <span [matBadge]="countNumber" matBadgeSize="small" matBadgeOverlap="false">Notification</span></div>
+        <div> <span [matBadge]="countNumber" matBadgeSize="medium" matBadgeOverlap="false">Notification</span></div>    
+        <div>  <span [matBadge]="countNumber" matBadegeSie="large" matBadgeOverlap="false">Notification</span></div>
+    
+    </div>
+    <div class="col-md-2">
+<h3>Small Color and Overlap</h3>
+        <div> <span matBadge="2" matBadgeSize="small" matBadgeColor="warn" matBadgeOverlap="false">Notification</span></div>
+        <div> <span matBadge="2" matBadgeSize="medium" matBadgeColor="accent" matBadgeOverlap="false">Notification</span></div>    
+        <div>  <span matBadge="2" matBadegeSie="large" matBadgeColor="primary" matBadgeOverlap="false">Notification</span></div>
+        <h4>if notification value is 0 then </h4>
+        <span [matBadge]="countzero" [matBadgeHidden]="countzero===0">notification</span>
+        <h4>if notification have some value then </h4>
+        <span [matBadge]="count" [matBadgeHidden]="count===0">notification</span>
+    </div>
+    <div>
+       
+    </div>
+</div>
+    
+    
+   
+   
+  
+
+

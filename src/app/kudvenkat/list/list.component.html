@@ -1,0 +1,95 @@
+<mat-toolbar  class="navbar backgroundcolor">
+<div>
+    <span><button mat-button (click)="create()">Create</button></span>
+</div>
+</mat-toolbar>
+<!-- <div class="navbar navbar-dark">
+    <div class="nav navbar-nav">
+        <ul> <button mat-raised-button color="accent" (click)="create()">create</button>
+            
+        </ul>
+    </div>
+</div> -->
+<hr style="border: 2px solid gray;">
+<h2>All Employees Data List</h2>
+
+<div class="container">
+    <div *ngFor="let emp of employees">            
+
+            
+                <mat-card>
+                    <mat-card-header>{{emp.name}}</mat-card-header><br>
+                    <!-- <mat-card-title>this is the title</mat-card-title> -->
+                    <!-- <mat-card-subtitle>this is the subtitle</mat-card-subtitle> -->
+                    <mat-card-content>
+<div class="row">
+    <div class="col-md-4">
+        <img [src]="emp.photoPath">
+    </div>
+    <div class="col-md-8">
+        <div class="row">
+            <!-- <div class="col-md-8"> -->
+                <table>
+                    <tr>
+                        <td>ID:</td><td>{{emp.id}}</td>
+                    </tr>
+                    <tr>
+                        <td>Name:</td><td>{{emp.name}}</td>
+                    </tr>
+                    <tr>
+                        <td>Gender:</td><td>{{emp.gender}}</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td><td>{{emp.email}}</td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number:</td><td>{{emp.phoneNumber}}</td>
+                    </tr>
+                    <tr>
+                        <td>DOB:</td><td>{{emp.dateofbirth | date:'dd/mm/yyyy'}}</td>
+                    </tr>
+                    <tr>
+                        <td>Department:</td><td>{{emp.department}}</td>
+                    </tr>
+                    <tr>
+                        <td>isActive:</td><td>{{emp.isActive}}</td>
+                    </tr>
+                    
+                </table>
+
+            <!-- </div> -->
+            <!-- <div class="col-md-4">
+                <table>
+                    <tr>
+                        <td>{{emp.id}}</td>
+                        <td>{{emp.name}}</td>
+                    </tr>
+                </table>
+            </div> -->
+        </div>
+        
+    </div>
+</div>
+                    </mat-card-content>
+                    <!-- <mat-card-actions><button mat-raised-button color="accent">submit</button></mat-card-actions> -->
+                    <!-- <mat-card-footer>this is the footer</mat-card-footer> -->
+        
+                </mat-card><br><br>
+            
+        
+        
+    </div>
+
+   
+</div>
+<hr style="border: 2px solid gray;"/>
+
+<!-- <mat-card>
+    <mat-card-header>this is the header</mat-card-header>
+    <mat-card-title>this is the title</mat-card-title>
+    <mat-card-subtitle>this is the subtitle</mat-card-subtitle>
+    <mat-card-content>this is the content</mat-card-content>
+    <mat-card-actions><button mat-raised-button color="accent">submit</button></mat-card-actions>
+    <mat-card-footer>this is the footer</mat-card-footer>
+
+</mat-card> -->

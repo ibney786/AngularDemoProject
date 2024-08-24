@@ -1,0 +1,321 @@
+<br>
+<!-- Tabs groups section -->
+<h1 style="text-align: center;">This is the Mat Tabs section</h1>
+<mat-tab-group>
+    <mat-tab label="Input Tabs">
+        <p>this is the paragraph one!</p>
+        <mat-form-field appearance="outline" color="accent">
+            <mat-label>Name:</mat-label>
+            <input matInput>
+            <mat-hint>5 charactor needed</mat-hint>
+        </mat-form-field> &nbsp;&nbsp;&nbsp;
+        <mat-form-field floatLabel="always" appearance="outline" color="accent">
+            <mat-label>Name:</mat-label>
+            <input matInput>
+            <mat-hint align="end">4 charactors</mat-hint>
+        </mat-form-field>&nbsp;&nbsp;&nbsp;
+
+        <mat-form-field floatLabel="auto" color="primary">
+            <mat-label>Name:</mat-label>
+            <input matInput reuired>
+            <mat-hint>4 charactors</mat-hint>
+        </mat-form-field>&nbsp;&nbsp;&nbsp;
+
+        <mat-form-field appearance="fill" color="warn">
+            <mat-label>Name:</mat-label>
+            <input matInput reuired>
+            <mat-hint>4 charactors</mat-hint>
+        </mat-form-field>&nbsp;&nbsp;&nbsp;
+
+        <mat-form-field color="accent">
+            <mat-label>Name:</mat-label>
+            <input matInput reuired>
+            <mat-hint>4 charactors</mat-hint>
+        </mat-form-field>&nbsp;&nbsp;&nbsp;
+<!-- mat datepicker -->
+
+<mat-form-field>
+    <mat-label>DatePicker</mat-label>
+    <input matInput [matDatepicker]="mydate"/>
+    <mat-datepicker-toggle [for]="mydate" matSuffix></mat-datepicker-toggle>
+    <mat-datepicker #mydate ></mat-datepicker>
+</mat-form-field>&nbsp;&nbsp;&nbsp;
+
+<!-- hide the previous date only select current and next date -->
+
+<mat-form-field>
+    <mat-label>Hide the previous</mat-label>
+    <input matInput [matDatepicker]="mydate1" [min]="minDate"/>
+    <mat-datepicker-toggle [for]="mydate1" matSuffix></mat-datepicker-toggle>
+    <mat-datepicker #mydate1 ></mat-datepicker>
+</mat-form-field>&nbsp;&nbsp;&nbsp;
+
+<p>Hide sunday and saturday day!</p>
+<mat-form-field>
+    <mat-label>sunday and saturday</mat-label>
+    <input matInput [matDatepicker]="mydate2" [min]="minDate" [matDatepickerFilter]="dateFilter"/>
+    <mat-datepicker-toggle [for]="mydate2" matSuffix></mat-datepicker-toggle>
+    <mat-datepicker #mydate2 ></mat-datepicker>
+</mat-form-field>
+    </mat-tab>
+
+    <mat-tab label="Select Tabs">
+        <p>this is the paragraph 2!</p>
+        <div class="row">
+
+            <div class="col-md-3">
+                <mat-form-field>
+                    <mat-label>topics</mat-label>
+                    <mat-select multiple [(value)]="selectedValue">
+
+                        <mat-option value="angular">Angualr</mat-option>
+                        <mat-option value="vue">Vue</mat-option>
+                        <mat-option value="react">React</mat-option>
+                        <mat-option value="core net">core net</mat-option>
+                        <mat-option value="c#">C#</mat-option>
+                        <mat-option value="c++">C++</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <p>You are selected {{selectedValue}}</p>
+            </div>
+
+
+            <div class="col-md-3">
+                <mat-form-field>
+                    <mat-label>select value</mat-label>
+                    <mat-select [(value)]="selectedValue2">
+                        <mat-option value="angular1">Angular1</mat-option>
+                        <mat-option value="react2"> React</mat-option>
+
+                    </mat-select>
+                </mat-form-field>
+                <p>You are selected:- {{selectedValue2}}</p>
+            </div>
+
+
+            <div class="col-md-3">
+                <mat-form-field>
+                    <mat-label>select</mat-label>
+                    <mat-select [(value)]="subject">
+                        <mat-option>none</mat-option>
+                        <mat-optgroup>
+                            <mat-label style="color: yellow; background-color: yellowgreen;">subjects</mat-label>
+                            <mat-option value="maths">Maths</mat-option>
+                            <mat-option value="hindi">Hindi</mat-option>
+                            <mat-option value="english">English</mat-option>
+                            <mat-option value="chamistri">Chamistri</mat-option>
+
+                        </mat-optgroup>
+                        <mat-optgroup>
+                            <mat-label style="color: yellow; background-color: yellowgreen;">Electronics</mat-label>
+                            <mat-option value="led">LED</mat-option>
+                            <mat-option value="mobile">Mobile</mat-option>
+                            <mat-option value="microphone">Microphone</mat-option>
+                            <mat-option value="phone">Phone</mat-option>
+
+                        </mat-optgroup>
+                    </mat-select>
+                </mat-form-field>
+                <p>selected subject :-{{subject}}</p>
+            </div>
+        </div>
+
+
+
+    </mat-tab>
+
+    <mat-tab label="Autocompleted">
+        <p style="text-align: center;">This is the Autocompleted Example!</p>
+        <div class="row">
+            <div class="col-md-4">
+                <p>simple AutoComplete</p>
+                <form>
+                    <mat-form-field>
+                        <mat-label>AutoComplete</mat-label>
+                        <input type="text" matInput [matAutocomplete]="auto" />
+                        <mat-autocomplete #auto="matAutocomplete">
+                            <mat-option *ngFor="let option of listvalues" [value]="option">
+                                {{option}}
+                            </mat-option>
+
+                        </mat-autocomplete>
+                    </mat-form-field>
+
+                </form>
+            </div>
+
+            <div class="col-md-4">
+                <p>Autocompleted with object values!</p>
+                <form>
+                    <mat-form-field>
+                        <mat-label>with obj</mat-label>
+                        <input type="text" matInput [matAutocomplete]="auto1" />
+                        <mat-autocomplete #auto1="matAutocomplete" [displayWith]="displayfn">
+                            <mat-option *ngFor="let opt of objList" [value]="opt">
+                                {{opt.name}}
+
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                </form>
+            </div>
+
+
+            <div class="col-md-4">
+                <p>Autocompleted base on value !</p>
+                <form>
+                    <mat-form-field>
+                        <mat-label>baseOn value</mat-label>
+                        <input type="text" matInput [matAutocomplete]="auto2" formControl="mycontrols" />
+                        <mat-autocomplete #auto2="matAutocomplete" [displayWith]="displayfn">
+                            <mat-option *ngFor="let opt of filteroptions |async " [value]="opt">
+                                {{opt}}
+
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                </form>
+            </div>
+        </div>
+    </mat-tab>
+    <mat-tab label="Radio and checkBox">
+        <div class="row">
+            <div class="col-md-3">
+                <mat-checkbox> subscrib </mat-checkbox><br>
+                <mat-checkbox labelPosition="before"> subscrib </mat-checkbox>
+                <mat-checkbox color="accent"> subscrib </mat-checkbox>
+                <mat-checkbox color="primary"> subscrib </mat-checkbox><br>
+                <mat-checkbox labelPosition="before" color="warn"> subscrib </mat-checkbox>
+
+            </div>
+
+            <div class="col-md-3">
+                <mat-radio-group>
+                    <mat-radio-button value="one" color="primary">one</mat-radio-button>
+                    <mat-radio-button value="two">tow</mat-radio-button>
+                    <mat-radio-button value="three" color="primary">three</mat-radio-button>
+                    <mat-radio-button value="four" color="warn">four</mat-radio-button>
+
+                </mat-radio-group>
+            </div>
+        </div>
+
+
+
+    </mat-tab>
+    <mat-tab label="Tabs five">
+        <p>this is the paragraph 5!</p>
+    </mat-tab>
+
+</mat-tab-group>
+<br /><br /><br />
+<mat-divider></mat-divider><br>
+
+<!-- Mat expansion panel section -->
+<h1 style="text-align: center;">This is the mat expantion panel </h1>
+<mat-accordion>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                this is the Mat expansion panel 1
+            </mat-panel-title>
+            <mat-panel-description>
+                time duration 3 hours! this is the description
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>this is the Components! asfa hkahfhahf ahheohqnca hfoehlah </p>
+    </mat-expansion-panel>
+    <br>
+
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                this is the Mat expansion panel 2
+            </mat-panel-title>
+            <mat-panel-description>
+                time duration and description of the panel hours!
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>this is the Components! hs ha oeuw aeruoe hncajcaffaffd eretgs</p>
+    </mat-expansion-panel>
+    <br>
+
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                this is the panel 3
+            </mat-panel-title>
+            <mat-panel-description>
+                time duration 3 hours!al description of the panel
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>this is the Components! jaljfa hfefahlf eoheohs yhsaf </p>
+    </mat-expansion-panel>
+
+</mat-accordion>
+<br>
+<!-- stepper section   Horizontal-->
+<h1 style="text-align: center;">this the stepper section with Horizontal</h1>
+<mat-horizontal-stepper linear>
+    <mat-step label="Billing address" completed="true">
+        <p>Billing address details!</p>
+        <div>
+            <button mat-raised-button matStepperNext color="primary" matTooltip="click Button To Next">Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="shipping address" completed="true">
+        <p>shipping address details!</p>
+        <div>
+            <button mat-raised-button matStepperPrevious color="primary" matTooltip="click Button To Back">Back</button>
+            <button mat-raised-button matStepperNext color="primary" matTooltip="click Button To Next">Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="place order" completed="true">
+        <p>place order details!</p>
+        <div>
+            <button mat-raised-button matStepperPrevious color="primary" matTooltip="click Button To Back">Back</button>
+            <button mat-raised-button matStepperNext color="primary" matTooltip="click Button To Next">Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="receive order" completed="true">
+        <p>receive order details!</p>
+        <div align="end">
+            <button mat-raised-button matStepperPrevious color="primary" matTooltip="click Button To Back">Back</button>
+            <button mat-raised-button matStepperNext color="primary" matTooltip="click Button To Next">Next</button>
+        </div>
+    </mat-step>
+</mat-horizontal-stepper>
+
+
+<br>
+<!-- stepper section   vertical-->
+<h1 style="text-align: center;">this the stepper section with vertical</h1>
+<mat-vertical-stepper linear>
+    <mat-step label="Billing address" completed="true">
+        <p>Billing address details!</p>
+        <div>
+            <button mat-raised-button matStepperNext color="primary" matTooltip="click Button To Next">Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="shipping address" completed="true">
+        <p>shipping address details!</p>
+        <div>
+            <button mat-raised-button matStepperPrevious color="primary" matTooltip="click Button To Back">Back</button>
+            <button mat-raised-button matStepperNext color="primary" matTooltip="click Button To Next">Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="place order" completed="true">
+        <p>place order details!</p>
+        <div>
+            <button mat-raised-button matStepperPrevious color="primary"matTooltip="click Button To Back">Back</button>
+            <button mat-raised-button matStepperNext color="primary" matTooltip="click Button To Next">Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="receive order" completed="true">
+        <p>receive order details!</p>
+        <div>
+            <button mat-raised-button color="primary" matStepperPrevious matTooltip="click Button To Back">Back</button>
+            <button mat-raised-button matStepperNext color="primary" matTooltip="click Button To Next">Next</button>
+        </div>
+    </mat-step>
+</mat-vertical-stepper>

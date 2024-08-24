@@ -1,0 +1,8 @@
+<h1>this is the h1 heading and in the parent component </h1>
+
+parent component:<input type="text" #pcomponent (keyup)="0">
+<br>
+data coming from child:-{{childdata}}
+
+
+<app-child [pdata]="pcomponent.value"  (childData)="getchilddata($event)"></app-child>

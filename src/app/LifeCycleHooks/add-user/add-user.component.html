@@ -1,0 +1,123 @@
+<h1>Add New User</h1>
+
+<div class="container"> 
+
+    <div class="row">
+        
+        <div class="col-md-6">
+            
+            <form [formGroup]="emp" >
+                <div>
+                    <button type="submit"  class="btn btn-primary" (click)="submit(emp)">Add User</button>
+                </div>
+
+                <div>
+                    <label for="firstname">FirstName:-</label>
+                    <input type="text" id="firstname" name="firstname" formControlName="firstname" />
+                </div><br>
+              
+                <div>
+                    <label for="lastname">LastName:-</label>
+                    <input type="text" id="lastname" name="lastname" formControlName="lastname" />
+
+                </div><br>
+
+                <div>
+                    <label for="email">Email:-</label>
+                    <input type="text" id="email" name="email" formControlName="email" />
+
+                </div><br>
+
+                <div>
+                    <label for="phoneNo">Phone:-</label>
+                    <input type="text" id="phoneNo" name="phone" formControlName="phone_No" />
+
+                </div><br>
+                <div>
+                    <label for="conpany">Company:-</label>
+                    <input type="text" id="company" name="company" formControlName="company" />
+
+                </div><br>
+                <div>
+                    <label for="gender">Gender:-</label>
+                    <input type="radio" id="gender" name="gender" value="male" formControlName="gender" />Male
+                    <input type="radio" id="gender" name="gender" value="female" formControlName="gender" />Female
+                
+                </div><br>
+                <div>
+                    <label for="dob">DOB:-</label>
+                    <input type="date" id="dob" name="dob" formControlName="dob" />
+
+                </div><br>
+                <div>
+                    <label for="password">Password:-</label>
+                    <input type="password" id="password" name="passwoed" formControlName="password" />
+
+                </div><br>
+
+                <div>
+                    <label for="conPass">Confirm-Password:-</label>
+                    <input type="password" id="conPass" name="conformPassword" formControlName="conformPassword" />
+
+                </div><br>
+               
+
+             
+                <p>
+                    <button type="submit"  class="btn btn-primary">Register</button>
+                </p>
+                <p>
+                    <button type="submit"  class="btn btn-primary" (click)="reset()">Cancel</button>
+                </p>
+              
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<br>
+<div class="container">
+    
+            <table border="2" >
+                
+                    <tr><td>FirstName</td>
+                        <td>LastName</td>
+                        <td>Email</td>
+                        <td>Phone</td>
+                        <td>Company</td>
+                        <td>Gender</td>
+                        <td>DOB</td>
+                        <td>Edit</td>
+                        <td>Delete</td>
+                        
+                    </tr>
+                
+
+                
+                    <tr *ngFor="let data of userValue,let i=index">
+                        <td>{{data.firstname}}</td>
+                        <td>{{data.lastname}}</td>
+                        <td>{{data.email}}</td>
+                        <td>{{data.phone_No}}</td>
+                        <td>{{data.campany}}</td>
+                        <td>{{data.gender}}</td>
+                        <td>{{data.dob}}</td>
+                        <td><button  class="btn btn-primary" (click)="edit(data,i)">Edit</button></td>
+                        <td><button class="btn btn-primary" (click)="delete(data)">Delete</button></td>
+
+
+                    </tr>
+                
+            </table>
+                
+</div>
+
+
+
+<br>
+
+<app-userdetails [gridData]="userValue"></app-userdetails>

@@ -1,0 +1,211 @@
+
+<div class="container">
+
+     <form [formGroup]="employeeform" (ngSubmit)="onSubmit(employeeform)">
+            <mat-card [class.mat-elevation-z2]="true" [class.mat-elevation-z9]="true">
+                <div class="row">
+                    <div class="mat-elevation-z8">
+
+                    </div>
+                    <div class="col-md-10">
+                        <mat-card>
+                            <mat-grid-list cols="4" rowHeight="2:1">
+                                <mat-grid-tile>
+                                    <div >
+                                        <mat-label>ID:</mat-label>
+                                        <mat-form-field color="primary" appearance="outline">
+                                            <input matInput    formControlName="id" />
+                                        </mat-form-field>
+                                        
+                                    </div>
+                                   
+                                </mat-grid-tile>
+                                <mat-grid-tile>
+                                    <div>
+                                        <mat-label>ID:</mat-label>
+                                        <mat-form-field color="primary" appearance="outline">
+                                            <input matInput formControlName="id" />
+                                        </mat-form-field>
+                                        
+                                    </div>
+                                </mat-grid-tile>
+                              
+                            </mat-grid-list>
+
+                            <mat-grid-list cols="2" rowHeight="2:1">
+                                <mat-grid-tile>
+                                    <div class="mat-elevation-z8">
+                                        <mat-card>
+                                            <mat-card-header>
+                                                Create Employee
+                                            </mat-card-header>
+                                            <mat-card-content>
+                                                <div>
+                                                    <mat-label>User Name</mat-label>
+                                                    <mat-form-field appearance="outline">
+                                                        <input matInput placeholder="userName">
+                                                    </mat-form-field>
+                                                    
+                                                </div>
+                                            </mat-card-content>                                            
+
+                                            <mat-card-actions>
+                                                <button mat-raised-button color="primary" >Submit</button>
+                                            </mat-card-actions>
+                                        </mat-card>
+                                    </div>
+                                    
+                                </mat-grid-tile>
+                                
+                            </mat-grid-list><br>
+                        </mat-card>
+                    </div>
+
+                    <!-- button coding -->
+                    <div class="col-md-2">
+                        <div class="col-md-12">
+                            <button mat-raised-button color="primary" class="btnalignmenttop" >submit</button>
+                        </div><br>
+                        <div class="col-md-12">
+                            <button mat-raised-button color="accent" class="btnalignmenttop" (click)="back()">Back</button>
+                        </div>
+                    </div>
+                </div>
+            </mat-card>
+           
+        </form>
+    
+
+
+</div>
+<br>
+
+
+
+<h1 style="border: 1px solid maroon; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+In This Form We are Useing The Template Driven Form </h1>
+<div class="container">
+
+    <div class="mat-elevation-z8">
+        <mat-card [class.mat-elevation-z2]="true" [class.mat-elevation-z9]="true">
+            
+            
+    <form #employeeData="ngForm"  (ngSubmit)="saveEmployee(employeeData)">
+        <div class="panel panel-primary">
+            <div class="panel-header"><b> Create Employee </b></div>
+            
+            <div class="panel-body">
+                <div class="form-group" > 
+                    
+                <label for="UserName" class="control-label">UserName</label>
+                <input type="text" required  name="UserName" [(ngModel)]="UserName" #userName="ngModel" 
+                class="form-control" id="UserName" />
+
+                <span class="highlight" *ngIf="userName.touched && userName.errors?.['required']" >required</span>
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email"  name="Email" [(ngModel)]="Email" />
+                </div>
+<br>
+                
+                <div class="form-group">
+                    <label for="mobilenumber">MobileNumber</label>
+                    <input type="text" class="form-control" id="mobilenumber"  name="mobilenumber"
+                     [(ngModel)]="mobilenumber" />
+                </div>
+               
+                <br>
+                
+                
+                <div class="form-group">
+                    <label>Contact Referance</label>
+                    <div class="form-control" >
+                        <label class="radio-inline">
+                        <input type="radio" name="contactR" value="Phone" [(ngModel)]="contactR"/> phone
+                        </label>
+
+                        <label class="radio-inline">
+                            <input type="radio" name="contactR" value="email" [(ngModel)]="contactR"/> Email
+                            </label>
+                       
+                    </div>
+                    
+                </div>
+                
+                <br>
+                
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="form-control" >
+                        <label class="radio-inline">
+                        <input type="radio" name="gender" value="male" [(ngModel)]="gender" /> Male
+                        </label>
+
+                        <label class="radio-inline">
+                            <input type="radio" name="gender" value="female" [(ngModel)]="gender" [disabled]="false"/> Female
+                            </label>
+                       
+                    </div>
+                    
+                </div>
+
+                <div class="form-group">
+                    <div class="form-control">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="isChecked" [(ngModel)]="isChecked" />Is Active
+                        </label>
+
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="notChecked" [(ngModel)]="notChecked" />Not Active
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select id="department" name="department" [(ngModel)]="department" class="form-control">
+                       <option *ngFor="let dept of departments" [value]="dept.id">
+                        {{dept.name}}</option>
+                    </select>
+                </div><br>
+
+                  
+                <div class="form-group">
+                    <label for="dateOfBirth">Date Of Birth</label>
+                    <input type="date" class="form-control" id="dateOfBirth"  name="dateOfBirth"
+                     [(ngModel)]="dateOfBirth" />
+                </div><br>
+
+                
+                <div class="form-group">
+                    <label for="photopath">PhotoPath</label>
+                    <input type="text" class="form-control" id="photopath"  name="photopath"
+                     [(ngModel)]="photopath"  />
+                </div><br>
+                <div>
+                    <button type="button" class="btn btn-primary" (click)="showphoto()">{{previewPhoto?'Hide':'Show'}}Preview</button>
+                </div>
+
+                <div>
+                    <img [src]="photopath" width="200px" height="100px"  *ngIf="previewPhoto"/>
+                </div>
+
+
+            </div><br>
+            <div class="panel-footer">
+                <div>
+                    <button type="submit"  class="btn btn-primary">submit </button>
+                </div>
+               
+            </div>
+        </div>
+    </form>
+
+        </mat-card>
+    </div>
+
+</div>
+

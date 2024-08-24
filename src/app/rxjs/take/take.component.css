@@ -1,0 +1,10 @@
+button:hover{
+    color: green;
+    background-color: palegreen;
+}
+
+.box1{
+    border: 1px splid red;
+    width: auto;
+    height: auto;
+}

@@ -1,0 +1,67 @@
+<mat-toolbar color="primary" class="navbar">
+    <div><span>Brand Name</span>
+        <!-- <button (click)="toggle()">open</button> -->
+        <!-- <button (click)="sidenav.open()">open</button> -->
+        <!-- <button class="navbar-toggler collapsed border-0" type="button" data-toggle="collapse" data-target="#sidenav">
+            <span class="navbar-toggler-icon" (click)="toggle()"></span>
+            <div class="close-icon py-1" >✖</div>
+        </button> -->
+    </div>
+    
+
+    <div>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="list()">list</button>
+            <button mat-menu-item (click)="iconBadge()">Icon & Badge</button>
+            <button mat-menu-item>menu3</button>
+            <button mat-menu-item>menu4</button>
+        </mat-menu>
+
+        <span><button mat-button  [matMenuTriggerFor]="menu">List Components</button></span>
+
+        <mat-menu #table="matMenu">
+<button mat-menu-item (click)="showTable()"> Mat Table</button>
+        </mat-menu>
+        <span><button mat-button [matMenuTriggerFor]="table">Mat Table</button></span>
+
+        <mat-menu #Stepper="matMenu">
+            <button mat-menu-item (click)="stepper()">Tab & Stepper<br>expansion</button>
+        </mat-menu>
+        <span><button mat-button [matMenuTriggerFor]="Stepper">Tabs & Stepper</button></span>
+
+        <span>info</span>
+
+    </div>
+</mat-toolbar>
+
+<!-- <app-tab-stepper></app-tab-stepper> -->
+
+<div>
+<router-outlet></router-outlet>
+</div>
+
+
+<!-- 
+
+<mat-sidenav-container>
+    <mat-sidenav mode="side" id="sidenav" [(opened)]="opened">sidenav
+        <mat-sidenav-content>
+            <div><span>home</span></div>
+            <div> <span>about</span></div>
+    
+            <div><span>service</span></div>
+    
+            <div><span>info</span></div> -->
+            <!-- <button (click)="opened =!opened">toggle</button> -->
+<!-- 
+            <button (click)="sidenav.open()">open</button>
+            <button (click)="sidenav.close()">close</button> -->
+
+        <!-- </mat-sidenav-content>
+    </mat-sidenav>
+</mat-sidenav-container> -->
+
+
+
+
+

@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+        <mat-card [class.mat-elevation-z2]="true" [class.mat-elevation-z9]="true" >
+            <div class="mat-elevation-z8">
+                <mat-grid-list cols="4" rowHeight="2:1">
+                    <mat-grid-tile>
+                        <div>
+                            <mat-form-field>
+                                <input (keyup)="filterValue($event)" matInput placeholder="filter data" />
+                            </mat-form-field>
+                        </div>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </div>
+        </mat-card>
+    </div>
+</div>
+
+<br>
+<div class="container">
+    <mat-card [class.mat-elevation-z2]="true" [class.mat-elevation-z9]="true">
+        <div class="mat-elevation-z8">
+            <mat-paginator [pageSizeOptions]="[5,10,15]" showFirstLastButtons ></mat-paginator>
+            <mat-table [dataSource]="dataSource" matSort >
+                <ng-container matColumnDef="id">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>Id</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.id}}</mat-cell>
+                </ng-container>
+            
+                <ng-container matColumnDef="name">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header >Name</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+                </ng-container>
+            
+                <ng-container matColumnDef="address">
+                    <mat-header-cell *matHeaderCellDef >Address</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.address}}</mat-cell>
+                </ng-container>
+            
+                <ng-container matColumnDef="position">
+                    <mat-header-cell *matHeaderCellDef>Position</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.position}}</mat-cell>
+                </ng-container>
+            
+                
+                <ng-container matColumnDef="mobile">
+                    <mat-header-cell *matHeaderCellDef>Mobile</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.mobile}}</mat-cell>
+                </ng-container>
+            
+                <ng-container matColumnDef="countEmp">
+                    <mat-header-cell *matHeaderCellDef>CountEmp</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.countEmp}}</mat-cell>
+                </ng-container>
+            
+                <mat-header-row *matHeaderRowDef="displayColumns"></mat-header-row>
+                <mat-row (click)="logRowData(row)" *matRowDef="let row; columns:displayColumns;"></mat-row>
+            
+            </mat-table>
+           <!-- <mat-paginator [pageSizeOptions]="[2,4,6,8,9]" showFirstLastButtons></mat-paginator> -->
+            </div>
+           
+    </mat-card>
+</div>
+<br><br><br><br>

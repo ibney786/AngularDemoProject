@@ -1,0 +1,52 @@
+
+<br>
+<div class="container">
+    <mat-card [class.mat-elevation-z2]="true" [class.mat-elevation-z9]="true">
+        <div class="mat-elevation-z8">
+            <mat-table [dataSource]="dataSource" >
+                <ng-container matColumnDef="FirstName">
+                    <mat-header-cell *matHeaderCellDef>FirstName</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.firstname}}</mat-cell>
+                </ng-container>
+            
+                <ng-container matColumnDef="LastName">
+                    <mat-header-cell *matHeaderCellDef >LastName</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.lastname}}</mat-cell>
+                </ng-container>
+            
+                <ng-container matColumnDef="Email">
+                    <mat-header-cell *matHeaderCellDef >Email</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.email}}</mat-cell>
+                </ng-container>
+            
+                <ng-container matColumnDef="Phone">
+                    <mat-header-cell *matHeaderCellDef>Phone</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.phone_No}}</mat-cell>
+                </ng-container>
+            
+                
+                <ng-container matColumnDef="Company">
+                    <mat-header-cell *matHeaderCellDef>Company</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.company}}</mat-cell>
+                </ng-container>
+            
+                <ng-container matColumnDef="Gender">
+                    <mat-header-cell *matHeaderCellDef>Gender</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.gender}}</mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="DateOfBirth">
+                    <mat-header-cell *matHeaderCellDef>DOB</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.dob}}</mat-cell>
+                </ng-container>
+            
+                
+                <mat-header-row *matHeaderRowDef="displayColumns"></mat-header-row>
+                <mat-row (click)="logRowData(row)" *matRowDef="let row; columns:displayColumns;"></mat-row>
+            
+            </mat-table>
+            <!-- <mat-paginator [pageSizeOptions]="[5,10,15]" showFirstLastButtons ></mat-paginator> -->
+            </div>
+           
+    </mat-card>
+</div>

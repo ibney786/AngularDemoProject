@@ -1,0 +1,252 @@
+
+<br><br>
+<div class="container">
+
+    <form [formGroup]="formdata">
+           <mat-card [class.mat-elevation-z2]="true" [class.mat-elevation-z9]="true">
+               <div class="row">
+                 
+                   <div class="col-md-10">
+                   
+                       <mat-card>
+                           <mat-grid-list cols="4" rowHeight="2:1">
+                               <mat-grid-tile>
+                                   <div>
+                                       <mat-label>landownershipcertificate</mat-label>
+                                       <input type="file"  id="landdowner"  (change)="upload($event)"/>
+                                       <div *ngFor="let file of landownershipcertificate">
+                                          {{file.id}}
+                                       </div>
+                                             <!-- <mat-form-field color="primary" appearance="outline"> -->
+                                              
+                                     <!-- <input type="file" class="file-input" (change)="onFileSelected($event)" #fileupload/>
+                                     <div class="file-upload">
+                                        <button (click)="fileupload.click()">add file
+
+                                        </button>
+
+                                     </div> -->
+                                          
+                                       <!-- </mat-form-field> -->
+                                       
+                                   </div>
+                               </mat-grid-tile>
+
+
+                               <mat-grid-tile>
+                                <div>
+                                    <mat-label>locationlofland</mat-label>
+                                   
+                                    <input type="file"  id="location"  (change)="upload($event)"/>
+                                    <div *ngFor="let file of uploadeddata">
+                                       {{file.id}}
+                                    </div>
+                                      
+                                                        
+                                </div>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile>
+                                <div>
+                                    <mat-label>certificateoflocation</mat-label>
+                                                                         
+
+                                    <input type="file"  id="certOflocation"  (change)="upload($event)"/>
+                                    <div *ngFor="let file of uploadeddata">
+                                       {{file.id}}
+                                    </div>
+
+                                        
+                                    
+                                </div>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile>
+                                <div>
+                                    <mat-label>mapofthelanddurlysigned</mat-label>
+                                                                       
+                                    <input type="file"  id="mapofland"  (change)="upload($event)"/>
+                                    <div *ngFor="let file of uploadeddata">
+                                       {{file.id}}
+                                    </div>
+                                                                           
+                                    
+                                </div>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile>
+                                <div>
+                                    <mat-label>stateCode</mat-label>
+                                    <mat-form-field color="primary" appearance="outline">
+                                        <input matInput  formControlName="stateCode"/>
+                                    </mat-form-field>
+                                    
+                                </div>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile>
+                                <div>
+                                    <mat-label>districtCode</mat-label>
+                                    <mat-form-field color="primary" appearance="outline">
+                                        <input matInput  formControlName="districtCode"/>
+                                    </mat-form-field>
+                                    
+                                </div>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile>
+                                <div>
+                                    <mat-label>broadObjective</mat-label>
+                                    <mat-form-field color="primary" appearance="outline">
+                                        <input matInput  formControlName="broadObjective"/>
+                                    </mat-form-field>
+                                    
+                                </div>
+                            </mat-grid-tile>
+
+
+                            <mat-grid-tile>
+                                <div>
+                                    <mat-label>visionMission</mat-label>
+                                    <mat-form-field color="primary" appearance="outline">
+                                        <input matInput  formControlName="visionMission"/>
+                                    </mat-form-field>
+                                    
+                                </div>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile>
+                                <div>
+                                    <mat-label>organizationalStructure</mat-label>
+                                    <mat-form-field color="primary" appearance="outline">
+                                        <input matInput  formControlName="organizationalStructure"/>
+                                    </mat-form-field>
+                                    
+                                </div>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile>
+                                <div>
+                                    <mat-label>roleAndResponsibility</mat-label>
+                                    <mat-form-field color="primary" appearance="outline">
+                                        <input matInput  formControlName="roleAndResponsibility"/>
+                                    </mat-form-field>
+                                    
+                                </div>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile>
+                                <div>
+                                    <mat-label>boardOfGovernance</mat-label>
+                                    <mat-form-field color="primary" appearance="outline">
+                                        <input matInput  formControlName="boardOfGovernance"/>
+                                    </mat-form-field>
+                                    
+                                </div>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile>
+                                <div>
+                                    <mat-label>pmuDetail</mat-label>
+                                    <mat-form-field color="primary" appearance="outline">
+                                        <input matInput  formControlName="pmuDetail"/>
+                                    </mat-form-field>
+                                    
+                                </div>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile>
+                                <div>
+                                    <mat-label>existingLandAvailability</mat-label>
+                                    <mat-form-field color="primary" appearance="outline">
+                                        <input matInput  formControlName="existingLandAvailability"/>
+                                    </mat-form-field>
+                                    
+                                </div>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile>
+                                <div>
+                                    <mat-label>latitude</mat-label>
+                                    <mat-form-field color="primary" appearance="outline">
+                                        <input matInput  formControlName="latitude"/>
+                                    </mat-form-field>
+                                    
+                                </div>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile>
+                                <div>
+                                    <mat-label>longitude</mat-label>
+                                    <mat-form-field color="primary" appearance="outline">
+                                        <input matInput  formControlName="longitude"/>
+                                    </mat-form-field>
+                                    
+                                </div>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile>
+                                <div>
+                                    <mat-label>declarationOfFreeLandByStateGovt</mat-label>
+                                     <mat-form-field color="primary" appearance="outline">
+                                
+
+                                    <mat-select formControlName="declarationOfFreeLandByStateGovt">
+                                        <mat-option value="true">True</mat-option>
+                                        <mat-option value="false">False</mat-option>
+
+                                    </mat-select>
+                                </mat-form-field>
+                                </div>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile>
+                                <div>
+                                    <mat-label>isOrganogramUploaded</mat-label>
+                                     <mat-form-field color="primary" appearance="outline">
+                                 
+
+                                    <mat-select formControlName="isOrganogramUploaded">
+                                        <mat-option value="true">True</mat-option>
+                                        <mat-option value="false">False</mat-option>
+
+                                    </mat-select>
+                                </mat-form-field>
+                                </div>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile>
+                                <div>
+                                    <mat-label>menu</mat-label>
+                                    <mat-form-field color="primary" appearance="outline">
+                                      
+                                     
+                                    <mat-select formControlName="menu">
+                                        <mat-option value="state1">state1</mat-option>
+                                        <mat-option value="state2">state2</mat-option>
+                                        <mat-option value="state3">state3</mat-option>
+
+                                        <mat-option value="state4">state4</mat-option>
+
+
+                                    </mat-select>
+                                    </mat-form-field>
+                                    
+                                    
+                                </div>
+                            </mat-grid-tile>
+
+                           </mat-grid-list>
+                       </mat-card>
+                   </div>
+
+                   <div class="col-md-2">
+
+                    <div class="col-md-12">
+                        <button mat-raied-button color="primary" (click)="save()">Save</button>
+                    </div>
+                   </div>
+               </div>
+           </mat-card>
+    </form>
+</div>

@@ -1,0 +1,134 @@
+<div>
+    <h2>grandchild works!</h2>
+
+    <h1>customer child:- {{customer.Name}}</h1>
+
+    <p>used the track by method </p>
+    <p *ngFor="let stu of studentArr; trackBy:trackbydata" [ngClass]="{'highlight':stu.name==='ibney'}">
+        {{stu.name}} - {{stu.ngclass}}
+    </p>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form [formGroup]="contactform" (ngSubmit)="onSubmit()">
+                    <p>
+                        <label for="firstname">FirstName:-</label>
+                        <input type="text" id="firstname" name="firstname" formControlName="firstname" />
+                    </p>
+                    <p>
+                        <label for="lastname">LastName:-</label>
+                        <input type="text" id="lastname" name="lastname" formControlName="lastname" />
+                    </p>
+                    <p>
+                        <label for="email">Email:-</label>
+                        <input type="text" id="email" name="email" formControlName="email" />
+                    </p>
+                    <p>
+                        <label for="gender">Gender</label>
+                        <input type="radio" id="gender" name="gender" value="male" formControlName="gender" />Male
+                        <input type="radio" id="gender" name="gender" value="female" formControlName="gender" />Female
+                    </p>
+                    <p>
+                        <label for="ismarride">IsMarride</label>
+                        <input type="checkbox" id="ismarride" name="ismarride" formControlName="ismarride" />
+                    </p>
+                    <p>
+                        <label for="conuntry">Country</label>
+                        <select id="Country" name="conuntry" formControlName="conuntry">
+                            <option value="1">us</option>
+                            <option value="2">india</option>
+                            <option value="3">uk</option>
+                            <option value="4">pk</option>
+                            <option value="5">nz</option>
+                            <option value="6">uae</option>
+
+                        </select>
+                    </p>
+
+                    <p>
+                        <button type="submit" class="btn btn-primary">sumit</button>
+                    </p>
+                </form>
+            </div>
+
+
+
+
+            <div class="col-md-3">
+                <p>Required,maxlength,minlength,pattern and only numeric value and only charactor value validation
+                    implemented.</p>
+                <form [formGroup]="emp" (ngSubmit)="onSubmit2()">
+                    <p>
+                        <label for="firstname">FirstName:-</label>
+                        <input type="text" id="firstname" name="firstname" formControlName="firstname" />
+                    </p>
+                    <div
+                        *ngIf="!emp.get('firstname')?.valid &&(emp.get('firstname')?.dirty ||emp.get('firstname')?.touched)">
+                        <div class="highlight" [hidden]="!emp.get('firstname')?.errors?.['minlength']">Min Length 5
+                            charactor is required.</div>
+                        <div class="highlight" [hidden]="!emp.get('firstname')?.errors?.['maxlength']">Max Length 10
+                            charactor is required.</div>
+                        <div class="highlight" [hidden]="!emp.get('firstname')?.errors?.['required']">firstname is
+                            required </div>
+
+                    </div>
+                    <p>
+                        <label for="lastname">LastName:-</label>
+                        <input type="text" id="lastname" name="lastname" formControlName="lastname" />
+
+                    </p>
+                    <div
+                        *ngIf="!emp.get('lastname')?.valid && (emp.get('lastname')?.dirty|| emp.get('lastname')?.touched)">
+                        <div class="highlight" [hidden]="!emp.get('lastname')?.errors?.['pattern']">only charatctor is
+                            required !</div>
+                        <div class="highlight" [hidden]="!emp.get('lastname')?.errors?.['maxlength']">max length 10
+                            charatctor is required !</div>
+                        <div class="highlight" [hidden]="!emp.get('lastname')?.errors?.['required']">Last Name is
+                            required !</div>
+
+                    </div>
+
+                    <!-- nested formgroup -->
+
+                    <div formGroupName="empaddress">
+                        <div class="form-group">
+
+                            <label for="city">City:-</label>
+                            <input type="text" id="city" name="city" formControlName="city" />
+
+                        </div>
+                        <div class="form-group">
+
+                            <label for="state">State:-</label>
+                            <input type="text" id="state" name="state" formControlName="state" />
+
+                        </div>
+                        <div class="form-group">
+
+                            <label for="pincode">Pincode:-</label>
+                            <input type="text" id="pincode" name="pincode" formControlName="pincode" />
+
+                        </div>
+                    </div>
+                    <p>
+                        <button type="submit" [disabled]="!emp.valid">Submited</button>
+                    </p>
+                    <p>
+                        <button type="button" class="btn btn-primary"
+                            (click)="setDefaultvalue()">setDefaultValue</button>
+                    </p>
+                    <p>
+                        <button type="button" class="btn btn-primary" (click)="patchvalue()">patchValue</button>
+                    </p>
+                    <p>
+                        <button type="button" class="btn btn-primary" (click)="resetvalue()">resetvalue</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,30 @@
+body,html{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+mat-grid-tile div{
+    width: 95%;
+}
+mat-form-field{
+    display: inline !important;
+}
+.btnalignmenttop{
+    margin-top: 5% !important;
+    width: 100%;
+}
+
+button:hover{
+    background-color: palegreen;
+    color:green
+}
+
+mat-card-header{
+    background-color: gray;
+    line-height: normal;
+    padding: 5px 10px 5px 10px;
+}
+
+.highlight{
+    color: red;
+}

@@ -1,0 +1,46 @@
+.navbar{
+    justify-content: space-between;
+    height: 45px;
+}
+
+span, button{
+    padding-right: 1rem;
+}
+
+mat-sidenav-container{
+    height: 75%;
+}
+mat-sidenav,mat-sidenav-content{
+    padding: 10px;
+}
+mat-sidenav{
+    background-color: lightcoral;
+    width: 200px;
+}
+
+
+
+
+
+/* ,llllllllllllllllllllllll */
+
+
+
+body {
+    padding-top: 70px;
+}
+
+/* ditch the ugle blue outline */
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: 0;
+}
+
+/* hide close when burger shown */
+.navbar-toggler.collapsed .close-icon {
+    display: none;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+    display: inline;
+}

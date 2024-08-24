@@ -1,0 +1,13 @@
+/* .navbar{
+    background-color: coral;
+} */
+
+
+
+
+
+mat-toolbar {
+ position: relative;
+ top: 0;
+ z-index: 10;
+}

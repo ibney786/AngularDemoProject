@@ -1,0 +1,13 @@
+<div>
+    <h2>child component </h2>
+    <p>{{message}}</p>
+
+    <p [style.color]="mystyle">my style is apply</p>
+    code:<input type="number" name="Code" [(ngModel)]="customer.code" autocomplete="off">
+    Name: <input type="text" name="Name" [(ngModel)]="customer.Name" autocomplete="off">
+
+</div>
+<app-grandchild [customer]="customer">
+
+
+</app-grandchild>

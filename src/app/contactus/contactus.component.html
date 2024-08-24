@@ -1,0 +1,18 @@
+<h1>Contact Us Component!</h1>
+
+<div class="container">
+    <div>SubjectData:- {{subjectData}}</div> &nbsp;&nbsp;&nbsp;&nbsp;
+    <div>BehaviorSubjectData:-{{BehaviorSubjectData}}</div>
+    <div class="row">
+        <div class="col-md-4">
+        <label appMydirective>User Name</label>
+        <input type="text" #Uname class="form-control" placeholder="name"/><br>
+    
+        <button type="submit" mat-raised-button color="primary" (click)="sData(Uname)" >SubjectData</button> &nbsp;&nbsp;&nbsp;
+
+        <button mat-raised-button color="primary" (click)="bSData(Uname)">BehaviorSubjectData</button>
+    </div>
+</div>
+</div>
+
+

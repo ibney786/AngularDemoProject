@@ -1,0 +1,29 @@
+<div>
+<h2 style="text-align: center; color: brown;">parent componet lifecycle hooks</h2>
+
+
+<input type="text" name="message" [(ngModel)]="message" autocomplete="off" ><br>
+<input type="text" name="content" [(ngModel)]="content" autocomplete="off" ><br>
+
+Hide child:<input type="checkbox" name="hidechild" [(ngModel)]="content" autocomplete="off" >
+<br>
+Hide child:-<button (click)="toggle()">toggle</button>
+</div>
+
+<app-add-user></app-add-user>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<app-child [message]="message" *ngIf="hidechild">{{content}}
+
+
+
+</app-child> 
+
+
+
+ 

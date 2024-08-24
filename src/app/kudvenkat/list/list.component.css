@@ -1,0 +1,19 @@
+
+.navbar{
+    justify-content: space-between;
+    height: 45px;
+}
+.backgroundcolor{
+    background-color: lightgray;
+}
+
+mat-card-header{
+    background-color: lightgray
+}
+img{
+    width: 100pxpx;
+    height: 160px;
+}
+h2{
+    text-align: center;
+}

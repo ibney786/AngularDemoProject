@@ -1,0 +1,22 @@
+<h1>css deshboard </h1>
+
+<div>
+    <button mat-raised-button color="primary" (click)="padding()">Padding Example</button>
+</div>
+
+<div class="container">
+    <app-validators></app-validators>
+</div>
+
+<form [formGroup]="studentform">
+    <input type="text" formControlName="stuname" />
+    <div *ngIf="studentform.get('stuname')?.hasError('required')" class="error">   
+        name is required.
+</div>
+<div *ngIf="studentform.get('stuname')?.hasError('maxlength')" class="error">
+    maximaum length required 5 only
+</div>
+<div *ngIf="studentform.get('stuname')?.hasError('minLength')" class="error">
+    maximaum length required 2 only
+</div>
+</form>

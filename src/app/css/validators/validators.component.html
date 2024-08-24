@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>validators Examples !</h1>
+
+    User Name:-<input type="text" #name [formControl]="userName" pattern="^[a-z0-9_-]{8-15}$" />
+    <p *ngIf="userName.errors?.['pattern']">name is required!</p>
+
+    User Name:-<input type="text" #name [formControl]="userName" [pattern]="paternProperty" />
+
+    <p *ngIf="userName.errors?.['pattern']">name is required!</p>
+</div>

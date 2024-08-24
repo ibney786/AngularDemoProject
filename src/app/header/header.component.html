@@ -1,0 +1,150 @@
+<!-- 
+<nav class="navbar navbar-dark bg-primary">
+  <div>
+    <ul>
+      <li ><a routerLink="/">Home</a></li>
+      <li ><a routerLink="/About">About</a></li>
+
+      <li ><a routerLink="/ContactUs">contactUs</a></li>
+
+      <li ><a routerLink="/technology"> Technology</a></li>
+
+      <li ><a routerLink="/information">Information</a></li>
+
+      <li ><a routerLink="/courses">Courses</a></li>
+      <li ><a routerLink="AdminModule/Admin">Admin Module</a></li>
+    
+      <li ><a routerLink="RxjsOperators/operatorsList">RxJs Operators</a></li>
+      <li ><a routerLink="Css/Deshboard">CSS </a></li>
+      <li><a routerLink="kudvenkat/list">Kudvenkat</a></li>
+      <li><a routerLink="UImaterial/dashboard">UI Materials</a></li>
+
+    </ul>
+    
+  </div>
+</nav> -->
+
+<mat-toolbar color="primary" class="navbar container-fluid">
+  <div>brand Name</div>
+  <div>
+    <span><a routerLink="/">Home</a></span>
+    <span><a routerLink="/About">About</a></span>
+    <!-- <span><a routerLink="/ContactUs">contactUs</a></span> -->
+    <!-- <span><a routerLink="/technology"> Technology</a></span> -->
+    <span><a routerLink="/information">Information</a></span>
+    <span><a routerLink="/courses">Courses</a></span>
+    <span><a routerLink="AdminModule/Admin">Admin Module</a></span>
+    <span><a routerLink="RxjsOperators/operatorsList">RxJs Operators</a></span>
+    <span><a routerLink="Css/Deshboard">CSS </a></span>
+
+    <!-- =======Life Cycle Hooks menu list====== -->
+    <mat-menu #life="matMenu">
+      <button mat-menu-item (click)="lifecyclehooks()">LifeCyclehooks</button>
+      <button mat-menu-item (click)="angular_17()">Angular-17 </button>
+    </mat-menu>
+    <span><button mat-button  [matMenuTriggerFor]="life">LifeCyclehooks</button></span>
+
+
+
+
+<!-- ========Bootstrap Menu list  ========== -->
+
+
+    <mat-menu #boot="matMenu">
+      <button mat-menu-item (click)="bootstrap()">BootStrap</button>
+      <button mat-menu-item (click)="pipeExam()">CustomPipe</button>
+
+    </mat-menu>
+    <span><button mat-button  [matMenuTriggerFor]="boot">BootStrap</button></span>
+    
+
+    <!-- <span><a routerLink="kudvenkat/list">Kudvenkat</a></span> -->
+
+      <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="angular6()">Angular-6</button>
+          <button mat-menu-item (click)="AngularCrud()"> Angular-5 CRUD Opration</button>
+          <button mat-menu-item (click)="myproject()">MyProject</button>
+          <button mat-menu-item (click)="EcommerceSite()">EcommerceSite</button>
+          <button mat-menu-item>menu4</button>
+      </mat-menu>
+
+      <span><button mat-button  [matMenuTriggerFor]="menu">Kudvenkat</button></span>
+    
+    
+    <span><a routerLink="UImaterial/dashboard">UI Materials</a></span>
+    
+  </div>
+</mat-toolbar>
+
+
+<!-- <div><h1> This is the header component</h1></div> -->
+  <!-- <nav class="navbar navbar-dark bg-dark">
+    <div>
+      <ul>
+        <li ><a href="#">Home</a></li>
+        <li ><a href="#">Home</a></li>
+
+        <li ><a href="#">Home</a></li>
+
+        <li ><a href="#">Home</a></li>
+
+        <li ><a href="#">Home</a></li>
+
+        <li ><a href="#">Home</a></li>
+
+      </ul>
+    </div>
+  </nav> -->
+  
+  
+
+<!-- 
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <button mat-stroked-button [matMenuTriggerFor]="animals" color="accent">Animal index</button>
+    <mat-menu #animals="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+      <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+    </mat-menu>
+    
+    <mat-menu #vertebrates="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+      <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+      <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
+      <button mat-menu-item>Birds</button>
+      <button mat-menu-item>Mammals</button>
+    </mat-menu>
+    
+    <mat-menu #invertebrates="matMenu">
+      <button mat-menu-item>Insects</button>
+      <button mat-menu-item>Molluscs</button>
+      <button mat-menu-item>Crustaceans</button>
+      <button mat-menu-item>Corals</button>
+      <button mat-menu-item>Arachnids</button>
+      <button mat-menu-item>Velvet worms</button>
+      <button mat-menu-item>Horseshoe crabs</button>
+    </mat-menu>
+    
+    <mat-menu #fish="matMenu">
+      <button mat-menu-item>Baikal oilfish</button>
+      <button mat-menu-item>Bala shark</button>
+      <button mat-menu-item>Ballan wrasse</button>
+      <button mat-menu-item>Bamboo shark</button>
+      <button mat-menu-item>Banded killifish</button>
+    </mat-menu>
+    
+    <mat-menu #amphibians="matMenu">
+      <button mat-menu-item>Sonoran desert toad</button>
+      <button mat-menu-item>Western toad</button>
+      <button mat-menu-item>Arroyo toad</button>
+      <button mat-menu-item>Yosemite toad</button>
+    </mat-menu>
+    
+    <mat-menu #reptiles="matMenu">
+      <button mat-menu-item>Banded Day Gecko</button>
+      <button mat-menu-item>Banded Gila Monster</button>
+      <button mat-menu-item>Black Tree Monitor</button>
+      <button mat-menu-item>Blue Spiny Lizard</button>
+      <button mat-menu-item disabled>Velociraptor</button>
+    </mat-menu>
+    
+  </nav> -->

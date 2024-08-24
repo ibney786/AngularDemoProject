@@ -1,0 +1,89 @@
+<!-- 
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+       <div class="col-md-6">
+        <label appMydirective>UserName:</label>
+        <input  type="text" name="username" placeholder="EnterUserName" formControlName="user"/>
+       </div> 
+       <div>
+        <button type="submit" class="btn btn-primary">login</button>
+       </div>    
+        </div>
+    </div>
+</div> -->
+
+
+<div *ngIf="condition;else:elseb"  ngClass="red size20"> if condtion with multiple css classes</div>
+<ng-template #elseb >else block with multiple css as an array</ng-template>
+
+
+
+<div class="container">
+<form [formGroup]="signInform" (ngSubmit)="onSubmit(signInform)">
+  <div class="row">
+
+    <div class="col-md-4">
+      <label>User Name:</label>
+      <mat-form-field>
+      
+      <input type="text" matInput   formControlName="UserName" placeholder="Your name">
+    </mat-form-field>
+  <button type="submit" mat-raised-button color="primary">Send</button>
+    </div>
+  </div>
+  
+</form>
+<button (click)="showdata($event)">click here</button>
+</div>
+
+<button appMydirective>custom directive</button>
+<h1>pipes examples </h1>
+<p >medium date:-{{todate|date:'medium'}}</p>
+<p>sort date:-{{todate|date:'short'}}</p>
+<p>long date:-{{todate|date:'long'}}</p>
+<p>medium time:- {{todate|date:'mediumTime'}}</p>
+<p>slice pipes:-<b>{{msg|slice:4:20}}</b></p>
+<p>currency pipes-1:-{{cur|currency:'INR'}}</p>
+<p>currency pipes-2:-{{cur|currency}}</p>
+<!-- <p [showToolTip]="ibneyhasan">mouse over on it</p> -->
+
+<div class="example-container">
+  <mat-form-field>
+    <mat-label>Enter your password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'">
+    
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+
+  </mat-form-field>
+</div>
+
+<hr>
+<h1>the css apply as globle</h1>
+<h2>this is globley apply css</h2>
+
+<div class="body">
+  
+
+  <div class="container"><br><br>
+    <div class="sun"></div>
+    <div class="earth"></div>
+    
+  </div>
+
+
+  <div class="container"><br><br>
+    <div class="sun1"></div>
+    <div class="earth1"></div>  
+    
+  </div>
+  
+   
+  </div>
+  
+
+  
+
+  

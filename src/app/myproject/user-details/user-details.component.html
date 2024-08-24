@@ -1,0 +1,78 @@
+
+<h1 style="text-align: center; color: violet;">there are the user details showing here !</h1>
+
+<div class="container">
+    <mat-card >
+        <div class="mat-elevation-z8">
+            <mat-table [dataSource]="dataSource"  matSort >
+                <ng-container matColumnDef="Id">
+                    <mat-header-cell *matHeaderCellDef>Id</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.id}}</mat-cell>
+                </ng-container>
+            
+                <ng-container matColumnDef="FirstName">
+                    <mat-header-cell *matHeaderCellDef  mat-sort-header >First Name</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.firstname}}</mat-cell>
+                </ng-container>
+            
+                <ng-container matColumnDef="LastName">
+                    <mat-header-cell *matHeaderCellDef >Last Name</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.lastname}}</mat-cell>
+                </ng-container>
+            
+                <ng-container matColumnDef="Gender">
+                    <mat-header-cell *matHeaderCellDef>Gender</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.gender}}</mat-cell>
+                </ng-container>
+            
+                
+                <ng-container matColumnDef="Email">
+                    <mat-header-cell *matHeaderCellDef>Email</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.email}}</mat-cell>
+                </ng-container>
+            
+                <ng-container matColumnDef="Address">
+                    <mat-header-cell *matHeaderCellDef>Address</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.address}}</mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="Phone">
+                    <mat-header-cell *matHeaderCellDef>Phone</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.phone}}</mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="Edit">
+                    <mat-header-cell *matHeaderCellDef>Edit</mat-header-cell>
+                    <mat-cell *matCellDef="let element">
+                        <button mat-raised-button color="primary" (click)="edit(element)">
+                        Edit</button></mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="Delete">
+                    <mat-header-cell *matHeaderCellDef>Delete</mat-header-cell>
+                    <mat-cell *matCellDef="let element">
+                        <button mat-raised-button color="primary" (click)="delete(element)">
+                            Delete</button></mat-cell>
+                </ng-container>
+            
+                <mat-header-row *matHeaderRowDef="displayColumns"></mat-header-row>
+                <mat-row (click)="logRowData(row)" *matRowDef="let row; columns:displayColumns;"></mat-row>
+            
+            </mat-table>
+            <!-- <mat-paginator [pageSizeOptions]="[5,10,15]" showFirstLastButtons ></mat-paginator>
+             -->
+
+<mat-paginator  [length]="totalItems" [pageSizeOptions]="[10,20,30,40,50]"
+ [pageIndex]="currentPage" showFirstLastButtons >
+
+            </mat-paginator>
+
+        
+
+            
+            </div>
+           
+    </mat-card>
+</div>
+
+<br><br><br><br>

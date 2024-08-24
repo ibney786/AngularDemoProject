@@ -1,0 +1,56 @@
+p{
+    border: 1px solid red;
+    padding: 20px 20px 20px 20px;
+}
+
+button:hover{
+    color: green;
+    background-color:palegreen;
+}
+
+
+/* div css style */
+
+*{
+    box-sizing: border-box;
+}
+
+#box{
+    width: 400px;
+    height: 250px; 
+    background: #262626;
+    position: relative;
+    margin: 50px;
+    padding: 30px;
+    color: #ffff00;
+}
+#box::after,#box::before{
+    content: "";
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background:linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
+   background-size: 400%;
+   position: absolute;
+   top: -2px;
+   left: -2px;
+  z-index: -1;
+   animation: animation-shadow 10s linear infinite alternate;                                   
+
+}
+
+#box::after{
+    filter: blur(20px);
+}
+
+@keyframes animation-shadow{
+    0%{
+background-position: 0 0;
+    }
+    50%{
+background-position: 100% 0;
+
+    }
+    100%{
+background-position: 0 0;
+    }
+}

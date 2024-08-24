@@ -1,0 +1,15 @@
+<p>skipuntill works!</p>
+
+
+<div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+        <p class="changestyle" >when the mouse over the box then start the counting </p>
+        <div class="timer" (mouseenter)="on()">
+            {{counter}}
+        </div>
+    </div>
+
+</div>
+<button mat-raised-button  color="accent" (click)="back()">back</button>
+

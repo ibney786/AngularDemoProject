@@ -1,0 +1,14 @@
+h1{
+    color: red;
+    text-align: center;
+    border: 2px solid blue;
+    padding: 10px 10px 5px,5px;
+    width: 50%;
+    margin-left: 20%;
+    outline: 3px groove red;
+    outline-offset: 3px;
+}
+
+.error{
+    color: red;
+}

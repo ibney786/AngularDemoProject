@@ -1,0 +1,22 @@
+
+body,html{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+mat-grid-tile div{
+    width: 95%;
+}
+mat-form-field{
+    display: inline !important;
+}
+.btnalignmenttop{
+    margin-top: 5% !important;
+    width: 100%;
+}
+
+
+mat-card {
+    z-index: 8;
+   }
+

@@ -1,0 +1,340 @@
+<p>map works!</p>
+<button mat-raised-button color="accent" (click)="back()">back</button>
+
+<div class="row">
+    <div class="col-sm4">
+        <table border="1">
+            <tr>
+
+                <td>Id</td>
+                <td>FullName</td>
+            </tr>
+
+
+            <tr *ngFor="let val of finalvalue">
+                <td>{{val.id}}</td>
+                <td>{{val.fullName}}</td>
+            </tr>
+        </table>
+
+    </div>
+
+
+</div>
+
+<p>subject Data:-> {{subjectused}}</p>
+
+<input type="text" #name />
+<button (click)="subjectData(name.value)">sendSubData</button>
+<br>
+<app-array-program></app-array-program>
+
+<div class="container">
+    <div class="row">
+
+        <!-- 1  -->
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>used Pipe Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="pipe()">pipe used</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{pipeusedvalue}}</p>
+        </div>
+
+<!-- 2 -->
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+
+        <!-- 3 -->
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>concatMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="concatmap()">Concat Map</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{concatMapPoutput}}</p>
+        </div>
+
+        <!-- 4 -->
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>count  Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="countOperator()">count</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{countoperator}}</p>
+        </div>
+
+        <!-- 5 -->
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>debounce Time Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="debounceTime()">debouncetime</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{debouncetimeOperators}}</p>
+        </div>
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+        
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+
+
+        <div class="col-md-2">
+            <mat-card>
+                <mat-card-header>mergeMap Operators</mat-card-header>
+                <mat-card-content>Click on a button</mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="mergeMap()">mergeMap</button>
+                </mat-card-actions>
+            </mat-card>
+            <p>output:-> {{margemap}}</p>
+        </div>
+    </div>
+</div>

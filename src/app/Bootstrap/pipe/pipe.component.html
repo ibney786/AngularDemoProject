@@ -1,0 +1,32 @@
+<!-- example of custum pipe used -->
+
+<div class="container">
+    <h1>custom pipe example</h1>
+    <span>Search Here !</span>
+    <div>
+        <input type="text" [value]="nameString"/>
+    </div>
+    <table class="table table-sm table-striped m-t-4">
+        <thead class="thead-dark">
+          <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Gender</th>
+          <th>Department</th>
+          <th>Salary</th>
+          <th>Joining Date</th>
+        </tr>
+      </thead>
+      <!-- | search:nameString -->
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{employee.firstName }}</td>
+          <td>{{employee.lastName }}</td>
+          <td>{{employee.gender |search:employee.gender}}</td>
+          <td>{{employee.dept}}</td>
+          <td>{{employee.salary | currency}}</td>
+          <td>{{employee.doj | date:'dd/MM/yyyy'}}</td>
+        </tr>
+      </tbody>
+      </table>
+</div>

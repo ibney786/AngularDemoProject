@@ -1,0 +1,27 @@
+body,html{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+mat-grid-tile div{
+    width: 95%;
+}
+mat-form-field{
+    display: inline !important;
+}
+.btnalignmenttop{
+    margin-top: 5% !important;
+    width: 100%;
+}
+
+.number{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid maroon;
+    box-sizing: border-box;
+    height: 100px;
+}
+.container{
+    height: 500px;
+}
